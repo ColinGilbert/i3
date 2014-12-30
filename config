@@ -9,6 +9,11 @@
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
+# Hiding window Title bar
+for_window [class="^.*"] border pixel 1
+new_window 1pixel 
+
+
 set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -109,6 +114,18 @@ bindsym $mod+Shift+7 move container to workspace 7
 bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
+
+# Scratchpad
+bindsym $mod+Shift+minus move scratchpad
+bindsym $mod+minus scratchpad show
+
+# kill/restore i3bar on a given workspace
+bindsym $mod+n bar mode toggle
+bindsym $mod+b border none
+bindsym $mod+Shift+b border normal
+
+# Change border style
+bindsym $mod+t border normal
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
